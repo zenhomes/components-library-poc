@@ -9,9 +9,7 @@
         "npm": ">=5"
     },
     "scripts": {
-        "predeploy": "cd example && npm install && npm run build",
-        "deploy": "gh-pages -d example/build",
-        "init": "zenbit init"
+        "publish-components": "yoda export zenhomes.automated-collection"
     },
     "husky": {
         "hooks": {

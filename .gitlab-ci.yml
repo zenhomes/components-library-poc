@@ -1,6 +1,7 @@
 image: ${GCE_REPOSITORY}/${GCE_PROJECT_DEV}/chrome-headless
 stages:
     - test
+    - deploy
 
 services:
     - docker:18.09.7-dind
@@ -17,5 +18,14 @@ test:
     script:
         - npm_private_registry https://zenhomes.jfrog.io/zenhomes/api/npm/npm-virtual/ $NPM_ARTIFACTORY_TOKEN
         - npm install
-        - npm run test
-        - npm run build
+        # - npm run test
+        # - npm run build
+
+publish-components:
+    stage: deploy
+    script:
+        - npm run publish-components
+        # - export NODE_ENV=production
+    only:
+        - master
+    when: manual
