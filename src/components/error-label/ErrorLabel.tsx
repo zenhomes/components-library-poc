@@ -4,7 +4,7 @@ interface Props {
     error: string;
 }
 
-export const ErrorLabel = ({ error }: Props) => {
+export const ErrorLabel = ({ error = 'An error occurred' }: Props) => {
     return (
         <React.Fragment>
             <div className="error-label-wrapper d-flex flex-row align-items-center">
