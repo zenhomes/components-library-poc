@@ -26,6 +26,7 @@ publish-components:
     script:
         - npm_private_registry https://zenhomes.jfrog.io/zenhomes/api/npm/npm-virtual/ $NPM_ARTIFACTORY_TOKEN
         - npm install
+        - npm install -g bit-bin
         - ./bit_ci.sh
         - npm run publish-components
         # - export NODE_ENV=production
