@@ -10,7 +10,7 @@
     },
     "scripts": {
         "disable-bit-prompts": "bit config set analytics_reporting false && bit config set error_reporting false",
-        "publish-components": "yoda export zenhomes.automated-collection"
+        "publish-components": "bit import && yoda export zenhomes.automated-collection"
     },
     "husky": {
         "hooks": {

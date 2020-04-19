@@ -7,7 +7,7 @@ interface Props {
     label: string;
     className?: string;
     isDisabled?: boolean;
-    onClick?: () => void; // optional
+    onClick: () => void;
 }
 
 export const ButtonPending = ({ isPending, label, className, isDisabled, onClick }: Props) => {
