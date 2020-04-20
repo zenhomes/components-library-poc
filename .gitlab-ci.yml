@@ -39,7 +39,7 @@ publish-components:
         - git status
         - git add -A
         - git status
-        - git diff-index --quiet HEAD || git commit -m "Components Published via job: $CI_PIPELINE_ID"
+        - git diff-index --quiet HEAD || git commit -m "Components Published via job $CI_PIPELINE_ID"
         - git push
         # - export NODE_ENV=production
     only:
