@@ -9,13 +9,13 @@
             "version": "0.1.0",
             "path": "src/components/button-pending",
             "componentId": "button-pending",
-            "published": false
+            "published": true
         },
         "error-label": {
             "version": "0.1.0",
             "path": "src/components/error-label",
             "componentId": "error-label",
-            "published": false
+            "published": true
         }
     }
 }
