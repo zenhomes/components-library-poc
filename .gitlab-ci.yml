@@ -16,7 +16,7 @@ include:
 test:
     stage: test
     script:
-        - git status
+        - git --version
         - npm_private_registry https://zenhomes.jfrog.io/zenhomes/api/npm/npm-virtual/ $NPM_ARTIFACTORY_TOKEN
         # - npm install
         # - npm run test
