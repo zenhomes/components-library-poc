@@ -6,13 +6,13 @@
     },
     "components": {
         "button-pending": {
-            "version": "0.0.8",
+            "version": "0.1.0",
             "path": "src/components/button-pending",
             "componentId": "button-pending",
             "published": false
         },
         "error-label": {
-            "version": "0.0.3",
+            "version": "0.1.0",
             "path": "src/components/error-label",
             "componentId": "error-label",
             "published": false
