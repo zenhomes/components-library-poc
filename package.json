@@ -9,7 +9,7 @@
         "npm": ">=5"
     },
     "scripts": {
-        "publish-components": "bit import zenhomes.automated-collection/* && yoda export zenhomes.automated-collection"
+        "publish-components": "yoda export zenhomes.automated-collection"
     },
     "husky": {
         "hooks": {
