@@ -27,10 +27,20 @@ publish-components:
     stage: deploy
     script:
         - npm_private_registry https://zenhomes.jfrog.io/zenhomes/api/npm/npm-virtual/ $NPM_ARTIFACTORY_TOKEN
-        - npm install
+        # - npm install
         - npm install -g bit-bin
         - ./bit_ci.sh
+        - git clone https://zenhomes:$GITHUB_ACCESS_TOKEN@github.com/zenhomes/components-library-poc tempRepo
+        - cd tempRepo
+        - npm install
+        - git config user.email "gitlab_ci@zenhomes.de"
+        - git config --global user.name "Zenhomes Gitlab_CI"
         - npm run publish-components
+        - git status
+        - git add -A
+        - git status
+        - git diff-index --quiet HEAD || git commit -m "Components Published via job: $CI_PIPELINE_ID"
+        - git push
         # - export NODE_ENV=production
     only:
         - master
