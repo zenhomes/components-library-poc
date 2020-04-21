@@ -6,16 +6,16 @@
     },
     "components": {
         "button-pending": {
-            "version": "0.2.0",
+            "version": "0.2.1",
             "path": "src/components/button-pending",
             "componentId": "button-pending",
-            "published": true
+            "published": false
         },
         "error-label": {
-            "version": "0.2.0",
+            "version": "0.2.1",
             "path": "src/components/error-label",
             "componentId": "error-label",
-            "published": true
+            "published": false
         }
     }
 }
