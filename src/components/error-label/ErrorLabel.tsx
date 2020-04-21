@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface Props {
-    error?: string;
+    error: string;
 }
 
 export const ErrorLabel = ({ error }: Props) => {
